@@ -58,3 +58,12 @@ frontend
 vendor/                  contains dependent 3rd-party packages
 environments/            contains environment-based overrides
 ```
+
+## use docker
+
+```bash
+$ docker-compose build && docker-compose up
+$ docker-compose exec php7.1.18 php ./yii migrate
+```
+
+    mysql will expose 3306
