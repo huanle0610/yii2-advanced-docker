@@ -62,8 +62,15 @@ environments/            contains environment-based overrides
 ## use docker
 
 ```bash
-$ docker-compose build && docker-compose up
+$ docker-compose build 
+$ docker-compose config --services
+  mysql
+  php7.1.18
+$ docker-compose run -v `pwd`:/app php7.1.18 php ./init --env=Development
+$ docker-compose up
 $ docker-compose exec php7.1.18 php ./yii migrate
 ```
+
+[visit localhost](http://localhost:8895/index.php?r=site%2Flogin)
 
     mysql will expose 3306
