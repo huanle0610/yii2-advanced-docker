@@ -66,6 +66,7 @@ $ docker-compose build
 $ docker-compose config --services
   mysql
   php7.1.18
+$ docker-compose run -v `pwd`:/app php7.1.18 composer install
 $ docker-compose run -v `pwd`:/app php7.1.18 php ./init --env=Development
 $ docker-compose up
 $ docker-compose exec php7.1.18 php ./yii migrate
