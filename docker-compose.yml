@@ -41,6 +41,7 @@ services:
         MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
     restart: always
     volumes:
+      - ./:/app
       - mysqlstorage:/data/db
     ports:
       - "3306:3306"
