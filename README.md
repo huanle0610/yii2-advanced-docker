@@ -75,3 +75,10 @@ $ docker-compose exec php7.1.18 php ./yii migrate
 [visit localhost](http://localhost:8895/index.php?r=site%2Flogin)
 
     mysql will expose 3306
+
+
+## docs
+```bash
+docker-compose run -v `pwd`:/app php7.1.18 ./vendor/bin/apidoc api vendor/yiisoft,frontend,common,backend --interactive=0 output
+docker-compose run -v `pwd`:/app php7.1.18 ./vendor/bin/apidoc guide docs --interactive=0 output/guide
+```
